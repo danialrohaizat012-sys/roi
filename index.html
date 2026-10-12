@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b1214">
-  <meta name="description" content="ROI Resources ialah venture command centre yang menyatukan manusia, sistem dan modal untuk membina venture yang bermakna.">
+  <meta name="description" content="ROI Resources mencari bakat dan passion luar biasa, kemudian membantu membina venture melalui modal, sistem dan strategic advisory.">
   <meta property="og:title" content="ROI Resources — Venture Command Centre">
-  <meta property="og:description" content="Forging ventures that matter. Dari Kota Bharu, membina untuk dunia.">
+  <meta property="og:description" content="Talent deserves a real chance. Bawa business proposal dan bina venture bersama ROI Resources.">
   <meta property="og:type" content="website">
   <title>ROI Resources — Venture Command Centre</title>
   <style>
@@ -258,6 +258,88 @@
       .footer-inner { align-items: flex-start; flex-direction: column; }
       .footer-meta { text-align: left; }
     }
+
+    /* V2 — editorial, people-first direction */
+    .command-panel {
+      padding: 0 0 0 40px;
+      border: 0;
+      border-left: 1px solid rgba(255,255,255,.16);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+    .panel-head { padding: 0 0 18px; }
+    .panel-stat { padding: 16px 0; border-radius: 0; background: transparent; border-top: 1px solid var(--line); }
+    .manifesto { position: relative; overflow: hidden; }
+    .manifesto::after { content: "TALENT"; position: absolute; right: -38px; bottom: -100px; color: rgba(11,122,90,.045); font-size: 18vw; font-weight: 900; letter-spacing: -.08em; pointer-events: none; }
+    .truth-note { padding: 20px 0 0; border: 0; border-top: 2px solid var(--gold); border-radius: 0; background: transparent; }
+    .venture-grid { display: block; border-bottom: 1px solid #cfd8d2; }
+    .venture-card, .venture-card:nth-child(n) {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 220px 1fr 70px;
+      align-items: center;
+      gap: 28px;
+      padding: 34px 0;
+      border: 0;
+      border-top: 1px solid #cfd8d2;
+      border-radius: 0;
+      color: var(--command);
+      background: transparent;
+      overflow: visible;
+    }
+    .venture-card::after { display: none; }
+    .venture-card:hover { transform: translateX(8px); box-shadow: none; }
+    .venture-top { display: contents; }
+    .venture-index { grid-column: 1; grid-row: 1; }
+    .venture-arrow { grid-column: 3; grid-row: 1; justify-self: end; }
+    .venture-card > div:last-child { grid-column: 2; grid-row: 1; }
+    .venture-card h3 { font-size: clamp(2rem, 4vw, 4.2rem); }
+    .venture-card p { font-size: .95rem; }
+    .pillar-grid { gap: 30px; }
+    .pillar { min-height: 250px; padding: 24px 0; border: 0; border-top: 2px solid rgba(255,255,255,.2); border-radius: 0; background: transparent; }
+    .pillar:hover { border-color: var(--growth); }
+    .proposal { position: relative; padding: 130px 0; color: var(--command); background: var(--gold); overflow: hidden; }
+    .proposal::before { content: ""; position: absolute; width: 580px; height: 580px; right: -180px; top: -240px; border: 1px solid rgba(11,18,20,.2); border-radius: 50%; }
+    .proposal-lead { display: grid; grid-template-columns: 1.15fr .85fr; gap: 90px; align-items: end; }
+    .proposal .eyebrow { color: #5c4924; }
+    .proposal-copy { margin: 0; color: #574725; font-size: 1.08rem; }
+    .proposal-flow { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 70px; border-top: 1px solid rgba(11,18,20,.28); }
+    .proposal-step { position: relative; padding: 26px 28px 0 0; }
+    .proposal-step:not(:last-child)::after { content: "→"; position: absolute; right: 16px; top: 31px; opacity: .42; }
+    .proposal-step span { display: block; margin-bottom: 38px; font-size: .7rem; font-weight: 850; letter-spacing: .18em; }
+    .proposal-step h3 { margin: 0 0 10px; font-size: 1.35rem; }
+    .proposal-step p { margin: 0; color: #5d4d2c; font-size: .9rem; }
+    .proposal-action { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 75px; padding-top: 32px; border-top: 1px solid rgba(11,18,20,.28); }
+    .proposal-action p { max-width: 670px; margin: 0; font-weight: 700; }
+    .proposal-action .btn { color: white; background: var(--command); }
+    .founder-card { border-radius: 0; box-shadow: none; }
+    .founder-visual { border-right: 1px solid rgba(255,255,255,.12); }
+    .cta { background: var(--growth); }
+    .cta p { color: #154635; }
+
+    @media (max-width: 930px) {
+      .proposal-lead { grid-template-columns: 1fr; gap: 30px; }
+      .proposal-flow { grid-template-columns: repeat(2, 1fr); }
+      .proposal-step:nth-child(2) { border-right: 0; }
+      .command-panel { padding-left: 0; border-left: 0; border-top: 1px solid rgba(255,255,255,.16); padding-top: 30px; }
+    }
+
+    @media (max-width: 620px) {
+      .venture-card, .venture-card:nth-child(n) { grid-template-columns: 1fr 48px; gap: 12px; padding: 28px 0; }
+      .venture-index { grid-column: 1; grid-row: 1; }
+      .venture-arrow { grid-column: 2; grid-row: 1 / span 2; }
+      .venture-card > div:last-child { grid-column: 1; grid-row: 2; }
+      .proposal { padding: 88px 0; }
+      .proposal-flow { grid-template-columns: 1fr; }
+      .proposal-step { padding: 24px 0; border-bottom: 1px solid rgba(11,18,20,.2); }
+      .proposal-step span { margin-bottom: 22px; }
+      .proposal-step:not(:last-child)::after { display: none; }
+      .proposal-action { align-items: stretch; flex-direction: column; }
+      .proposal-action .btn { width: 100%; }
+      .founder-visual { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+    }
   </style>
 </head>
 <body>
@@ -272,7 +354,7 @@
       <button class="menu-btn" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
       <div class="nav-links">
         <a href="#tentang">Tentang</a><a href="#ventures">Ventures</a><a href="#cara-kami">Cara Kami</a><a href="#founder">Founder</a>
-        <a class="nav-cta" href="https://wa.me/60199400004?text=Hi%20Danial%2C%20saya%20ingin%20berbincang%20tentang%20ROI%20Resources." target="_blank" rel="noopener">Hubungi Kami</a>
+        <a class="nav-cta" href="#proposal">Bawa Proposal</a>
       </div>
     </nav>
   </div>
@@ -282,9 +364,9 @@
       <div class="container hero-inner">
         <div>
           <div class="hero-kicker"><i></i> From Kota Bharu, building forward</div>
-          <h1>Forging ventures <span>that matter.</span></h1>
-          <p class="hero-copy">ROI Resources ialah venture command centre yang menyatukan manusia, sistem dan modal untuk membina perniagaan yang mampu berkembang dengan arah yang jelas.</p>
-          <div class="hero-actions"><a class="btn btn-primary" href="#ventures">Terokai Ekosistem <span>↘</span></a><a class="btn btn-secondary" href="#tentang">Kenali ROI Resources</a></div>
+          <h1>Talent deserves <span>a real chance.</span></h1>
+          <p class="hero-copy">ROI Resources mencari individu yang mempunyai bakat luar biasa dan passion mendalam—kemudian membantu mereka mengubah kepakaran itu menjadi venture yang sebenar.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#proposal">Bawa Business Proposal <span>↘</span></a><a class="btn btn-secondary" href="#ventures">Lihat Ekosistem ROI</a></div>
         </div>
 
         <div class="command-panel" aria-label="Gambaran ROI Venture Command Centre">
@@ -304,8 +386,8 @@
 
     <section class="manifesto" id="tentang">
       <div class="container manifesto-grid reveal">
-        <div><p class="eyebrow">Apa itu ROI Resources</p><blockquote class="manifesto-quote">Venture menjalankan perniagaan. <em>ROI membina venture dan orang yang menjalankannya.</em></blockquote></div>
-        <div class="manifesto-copy"><p>ROI Resources ialah bentuk awal kepada visi ROI Group—sebuah pusat strategik yang menyatukan beberapa venture di bawah hala tuju, sistem dan disiplin pertumbuhan yang sama.</p><p>Kami membina daripada pengalaman sebenar: kedai fizikal, sistem digital, media, komuniti dan industri kreatif. Setiap venture mempunyai identiti serta pasukannya sendiri, manakala ROI membantu memperjelas arah, memperkukuh operasi dan membuka peluang seterusnya.</p><div class="truth-note"><strong>Fasa semasa:</strong> ROI Resources beroperasi sebagai enterprise dan ekosistem venture. Struktur ROI Group Sdn. Bhd. akan dibentuk apabila skala, pemilikan dan keperluan tadbir urus mencapainya.</div></div>
+        <div><p class="eyebrow">Talent-first venture builder</p><blockquote class="manifesto-quote">Kami mencari manusia yang <em>terlalu cintakan bidangnya untuk berhenti membina.</em></blockquote></div>
+        <div class="manifesto-copy"><p>Ramai orang mempunyai kemahiran dan passion yang mendalam, tetapi tidak mempunyai modal, sistem, arah perniagaan atau rakan strategik untuk membawa bakat mereka lebih jauh.</p><p>ROI Resources mahu menjadi tempat mereka membawa idea dan business proposal. Jika terdapat asas yang kuat serta keserasian visi, ROI boleh masuk sebagai rakan pelabur dan strategic advisor—membantu dari sudut model perniagaan, sistem, operasi, branding dan pertumbuhan.</p><div class="truth-note"><strong>Prinsip kami:</strong> kami tidak melabur hanya pada idea. Kami melihat manusia di belakangnya—integriti, penguasaan bidang, kesungguhan dan kesediaan untuk membina dalam jangka panjang.</div></div>
       </div>
     </section>
 
@@ -334,6 +416,22 @@
       </div>
     </section>
 
+    <section class="proposal" id="proposal">
+      <div class="container">
+        <div class="proposal-lead reveal">
+          <div><p class="eyebrow">Build with ROI</p><h2 class="section-title">Ada bakat.<br>Ada passion.<br>Bawa proposal.</h2></div>
+          <p class="proposal-copy">Kami mahu bertemu individu yang benar-benar menguasai bidangnya—daripada teknologi, seni dan media kepada retail, komuniti atau industri yang belum pernah kami terokai. Anda bawa kepakaran dan komitmen. Jika sesuai, ROI membawa modal, sistem dan pandangan strategik.</p>
+        </div>
+        <div class="proposal-flow reveal">
+          <article class="proposal-step"><span>01 · TALENT</span><h3>Tunjukkan kekuatan</h3><p>Siapa anda, apa yang anda kuasai dan mengapa bidang itu begitu penting kepada anda.</p></article>
+          <article class="proposal-step"><span>02 · PROPOSAL</span><h3>Bawa peluang</h3><p>Terangkan masalah, penyelesaian, pelanggan, model pendapatan dan apa yang diperlukan.</p></article>
+          <article class="proposal-step"><span>03 · EVALUATION</span><h3>Nilai bersama</h3><p>ROI menilai manusia, pasaran, kebolehlaksanaan, risiko dan keserasian jangka panjang.</p></article>
+          <article class="proposal-step"><span>04 · BUILD</span><h3>Modal + nasihat</h3><p>Proposal terpilih boleh menerima pelaburan, strategic advisory dan sokongan ekosistem ROI.</p></article>
+        </div>
+        <div class="proposal-action reveal"><p>Setiap kerjasama dinilai secara individu dan tertakluk kepada due diligence, struktur pemilikan serta persetujuan bertulis.</p><a class="btn" href="https://wa.me/60199400004?text=Hi%20Danial%2C%20saya%20ada%20bakat%20dan%20business%20proposal%20untuk%20dikongsikan%20dengan%20ROI%20Resources." target="_blank" rel="noopener">Perkenalkan diri & idea ↗</a></div>
+      </div>
+    </section>
+
     <section class="evolution">
       <div class="container evolution-grid">
         <div class="reveal"><p class="eyebrow">Perjalanan struktur</p><h2 class="section-title">Bermula kecil.<br>Dibina untuk berkembang.</h2><p class="section-copy">Nama dan identiti ROI direka supaya kekal relevan dari enterprise pertama hingga menjadi kumpulan syarikat yang matang.</p></div>
@@ -353,7 +451,7 @@
     </section>
 
     <section class="cta">
-      <div class="container cta-inner reveal"><div><h2>Ada idea, bakat atau peluang yang patut dibina?</h2><p>Kami terbuka untuk mengenali pengasas, operator, tenaga kreatif dan rakan strategik yang percaya kepada pembinaan jangka panjang.</p></div><a class="btn" href="https://wa.me/60199400004?text=Hi%20Danial%2C%20saya%20ingin%20berbincang%20tentang%20ROI%20Resources." target="_blank" rel="noopener">Mulakan perbualan ↗</a></div>
+      <div class="container cta-inner reveal"><div><h2>Bakat anda mungkin menjadi venture ROI yang seterusnya.</h2><p>Kami terbuka untuk mengenali builder, operator dan tenaga kreatif yang mempunyai penguasaan mendalam serta mahu membina sesuatu untuk jangka panjang.</p></div><a class="btn" href="#proposal">Lihat cara memohon ↑</a></div>
     </section>
   </main>
 
